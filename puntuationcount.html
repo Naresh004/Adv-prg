@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char str[100];
+	int i,c=0;
+	scanf("%[^\n]s",str);
+	for(i=0;i<=strlen(str);i++)
+	{
+		if(str[i]>=65&&str[i]<=90||str[i]>=97&&str[i]<=122)
+		{
+			continue;
+		}
+		else
+		{
+			c++;
+		}
+	}
+	printf("%d",c);
+}

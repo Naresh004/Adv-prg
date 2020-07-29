@@ -1,0 +1,33 @@
+#include<stdio.h> 
+#include<conio.h> 
+void shellSort(int a[],int n)
+{ 
+	int gap,i,temp,j; 
+	for(gap=n/2;gap>0;gap=gap/2)
+	{ 
+		for(i=gap;i<n;i++)
+		{ 
+			temp = a[i]; 
+			for(j=i;j>=gap && a[j-gap] > temp;j-=gap)
+			{ 
+				a[j] = a[j-gap]; 
+			} 
+			a[j] = temp; 
+		} 
+	}
+}
+void printArray(int a[],int n)
+{ 
+	int i; 
+	for(i=0;i<n;i++)
+	{ 
+		printf("%d ",a[i]); 
+	} 
+} 
+int main()
+{ 
+	int x[10] = {4,65,2,-31,0,99,2,83,782,1}; 
+	shellSort(x,10); 
+	printArray(x,10); 
+	return 0; 
+}

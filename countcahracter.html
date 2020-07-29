@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+	char str[100];
+	int i,j,c;
+	scanf("%s",str);
+	for(i=0;i<strlen(str);i++)
+	{
+		c=1;
+		for(j=i+1;j<strlen(str);j++)
+		{
+			if(str[i]==str[j])
+			{
+				c++;
+				str[j]='.';
+			}
+		}
+		if(str[i]!='.')
+		printf("%c == %d\n",str[i],c);
+	}
+	
+}

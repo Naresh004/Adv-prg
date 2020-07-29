@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	char str[100];
+	int i;
+	scanf("%[^\n]s",str);
+	for(i=0;i<=strlen(str);i++)
+	{
+		if(str[i]==32)
+		{
+			printf("\n");
+		}
+		printf("%c",str[i]);		
+	}
+}

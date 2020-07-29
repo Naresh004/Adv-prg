@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{	
+	int n,o,m,i=0,a,b;
+	scanf("%d%d%d",&o,&m,&n);
+	while(n!=0)
+	{	
+	a=i%3,b=i/3; 
+	switch(a) 
+	{
+	case 0:if(i==0)
+	printf("%d ",o);
+	else
+	printf("%d ",(b+1)*o+b*m);
+	break; 
+	case 1:if(i==1)
+	printf("%d ",i*m);
+	else
+	printf("%d ",b*o+(b+1)*m);
+	break;
+	case 2:printf("%d ",(b+1)*o+(b+1)*m);
+	break;
+	}
+		n--;
+		i++;
+	}
+	return 0;
+}
